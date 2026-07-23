@@ -1,63 +1,386 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 🏔️ JambiAdventure
 
-## About Laravel
+### Platform Wisata Alam & Petualangan Jambi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Midtrans](https://img.shields.io/badge/Payment-Midtrans-003399?style=for-the-badge)](https://midtrans.com)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**[🌐 Kunjungi Website](https://jambiadventure.web.id)** · **[📋 Laporkan Bug](https://github.com/Vindra999/travel-website/issues)**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+</div>
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 📸 Tampilan Website
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<div align="center">
 
-## Laravel Sponsors
+| Halaman Beranda | Halaman Berita |
+|:-:|:-:|
+| ![Beranda](https://i.imgur.com/placeholder1.png) | ![Berita](https://i.imgur.com/placeholder2.png) |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Toko Outdoor | Dashboard Admin |
+|:-:|:-:|
+| ![Toko](https://i.imgur.com/placeholder3.png) | ![Admin](https://i.imgur.com/placeholder4.png) |
 
-### Premium Partners
+</div>
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+> **🌐 Live Demo:** [https://jambiadventure.web.id](https://jambiadventure.web.id)
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📖 Tentang JambiAdventure
 
-## Code of Conduct
+**JambiAdventure** adalah platform wisata digital yang dirancang khusus untuk mempromosikan keindahan alam dan destinasi petualangan di Provinsi Jambi. Website ini menjadi jembatan antara wisatawan dengan pengalaman alam terbaik — mulai dari informasi destinasi, berita wisata terkini, hingga pembelian perlengkapan outdoor secara online.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Visi & Misi
+- 🎯 Menjadi portal wisata petualangan Jambi yang paling lengkap dan terpercaya
+- 🌿 Mempromosikan keindahan alam Jambi (Gunung Kerinci, Danau Gunung Tujuh, dll.)
+- 🛒 Memudahkan wisatawan mendapatkan perlengkapan outdoor berkualitas
+- 📰 Menyajikan berita dan inspirasi perjalanan yang informatif
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## ✨ Fitur Utama
 
-## License
+### 👤 Fitur untuk Pengunjung (Tanpa Login)
+| Fitur | Deskripsi |
+|---|---|
+| 🏠 **Halaman Beranda** | Hero banner, berita terkini, destinasi unggulan, dan produk populer |
+| 🗺️ **Destinasi Wisata** | Jelajahi destinasi wisata Jambi lengkap dengan foto dan lokasi |
+| 📰 **Berita & Artikel** | Baca artikel dan inspirasi perjalanan tanpa perlu login |
+| 🛒 **Toko Outdoor** | Lihat katalog produk perlengkapan outdoor beserta rating & ulasan |
+| 📄 **Halaman Informasi** | Tentang Kami, Layanan, dan Kebijakan Privasi |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 🔐 Fitur untuk Member (Setelah Login)
+| Fitur | Deskripsi |
+|---|---|
+| 💳 **Checkout & Pembayaran** | Pembelian produk dengan integrasi payment gateway Midtrans |
+| 📦 **Riwayat Transaksi** | Pantau status pesanan (pending, paid, cancelled) |
+| ⭐ **Review Produk** | Berikan ulasan dan rating untuk produk yang dibeli |
+| 👤 **Manajemen Profil** | Edit data diri dan akun |
+| 🔄 **Resume Pembayaran** | Lanjutkan pembayaran yang tertunda |
 
-## Website Travel
+### 🛡️ Fitur Admin
+| Fitur | Deskripsi |
+|---|---|
+| 📍 **Kelola Destinasi** | CRUD destinasi wisata beserta foto dan koordinat peta |
+| 📝 **Kelola Berita** | Buat, edit, dan hapus artikel berita dengan upload thumbnail |
+| 👥 **Manajemen User** | Lihat dan kelola seluruh akun pengguna |
 
-Pada website berisikan berita dan informasi terbaru tentang gunung di seluruh Indonesia dimana para pendaki dapat membooking secara online untuk mendaki dan dapat meminjam beberapa alat outdoor lainnya
+### 🏪 Fitur Seller
+| Fitur | Deskripsi |
+|---|---|
+| 📦 **Kelola Produk** | CRUD produk outdoor yang dijual di toko |
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+| Teknologi | Versi | Kegunaan |
+|---|---|---|
+| **PHP** | 8.2+ | Bahasa pemrograman utama |
+| **Laravel** | 12.x | Framework backend utama |
+| **Laravel Breeze** | 2.4 | Autentikasi (login, register, reset password) |
+| **Spatie Permission** | 6.x | Role & Permission (Admin, Seller, User) |
+| **Midtrans PHP** | 2.6 | Payment gateway untuk transaksi |
+
+### Frontend
+| Teknologi | Versi | Kegunaan |
+|---|---|---|
+| **Blade** | - | Template engine Laravel |
+| **TailwindCSS** | 3.x | Utility-first CSS framework |
+| **Alpine.js** | 3.x | Interaktivitas ringan di frontend |
+| **Vite** | 7.x | Bundler asset modern |
+| **Axios** | 1.x | HTTP client untuk request API |
+
+### Database & Infrastruktur
+| Teknologi | Kegunaan |
+|---|---|
+| **MySQL** | Database utama |
+| **InfinityFree** | Shared hosting production |
+| **GitHub Actions** | CI/CD — auto deploy via FTP ke hosting |
+
+---
+
+## 🗄️ Struktur Database
+
+```
+users               — Data pengguna & autentikasi
+├── roles           — Peran: Admin, Seller, User (via Spatie)
+destinations        — Data destinasi wisata
+├── id, name, description, location, image, latitude, longitude
+posts               — Artikel dan berita wisata
+├── id, user_id, title, content, category, image
+products            — Produk perlengkapan outdoor
+├── id, name, description, price, image, seller_id, avg_rating
+product_reviews     — Ulasan & rating produk
+├── id, user_id, product_id, rating, comment
+transactions        — Riwayat pembelian
+├── id, user_id, order_id, product_id, quantity, total_price, status, snap_token
+```
+
+---
+
+## 📁 Struktur Proyek
+
+```
+jambiadventure/
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/
+│   │   │   │   └── UserController.php       # Manajemen user oleh admin
+│   │   │   ├── Seller/
+│   │   │   │   └── ProductController.php    # CRUD produk oleh seller
+│   │   │   ├── CheckoutController.php       # Proses checkout & Midtrans
+│   │   │   ├── DestinationController.php    # CRUD destinasi
+│   │   │   ├── HomeController.php           # Halaman beranda
+│   │   │   ├── PostController.php           # CRUD berita/artikel
+│   │   │   ├── ProfileController.php        # Manajemen profil
+│   │   │   ├── StoreController.php          # Katalog toko & review
+│   │   │   ├── TransactionController.php    # Riwayat transaksi
+│   │   │   └── PaymentNotificationController.php  # Webhook Midtrans
+│   │   └── Middleware/
+│   │       └── RoleMiddleware.php           # Proteksi akses berdasarkan role
+│   └── Models/
+│       ├── User.php
+│       ├── Destination.php
+│       ├── Post.php
+│       ├── Product.php
+│       ├── ProductReview.php
+│       └── Transaction.php
+│
+├── resources/views/
+│   ├── layouts/
+│   │   └── app.blade.php                   # Layout utama (navbar, footer)
+│   ├── home.blade.php                      # Halaman beranda
+│   ├── admin/
+│   │   ├── posts/                          # Kelola berita (admin)
+│   │   ├── destinasi/                      # Kelola destinasi (admin)
+│   │   └── users/                          # Kelola user (admin)
+│   ├── seller/
+│   │   └── products/                       # Kelola produk (seller)
+│   ├── posts/                              # Halaman berita publik
+│   ├── destinations/                       # Halaman destinasi publik
+│   ├── products/                           # Halaman toko publik
+│   ├── checkout/                           # Halaman pembayaran
+│   ├── profile/                            # Dashboard & profil user
+│   └── auth/                              # Login, register, dll.
+│
+├── routes/
+│   ├── web.php                             # Definisi semua route
+│   └── auth.php                            # Route autentikasi (Breeze)
+│
+├── database/
+│   └── migrations/                         # Skema tabel database
+│
+├── public/
+│   └── uploads/posts/                      # Upload gambar berita
+│
+├── .github/workflows/
+│   └── deploy.yml                          # CI/CD auto-deploy via FTP
+│
+└── .env                                    # Konfigurasi environment
+```
+
+---
+
+## ⚙️ Instalasi & Menjalankan Lokal
+
+### Prasyarat
+Pastikan sudah terinstall:
+- **PHP** >= 8.2
+- **Composer** >= 2.x
+- **Node.js** >= 18.x & **NPM**
+- **MySQL** (atau database lain yang kompatibel)
+
+### Langkah Instalasi
+
+**1. Clone repository**
+```bash
+git clone https://github.com/Vindra999/travel-website.git
+cd travel-website
+```
+
+**2. Install dependensi PHP**
+```bash
+composer install
+```
+
+**3. Install dependensi Node.js**
+```bash
+npm install
+```
+
+**4. Salin file environment**
+```bash
+cp .env.example .env
+```
+
+**5. Generate application key**
+```bash
+php artisan key:generate
+```
+
+**6. Konfigurasi database di `.env`**
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=jambiadventure
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+**7. Konfigurasi Midtrans di `.env`** (untuk fitur pembayaran)
+```env
+MIDTRANS_SERVER_KEY=your_server_key
+MIDTRANS_CLIENT_KEY=your_client_key
+MIDTRANS_IS_PRODUCTION=false
+```
+
+**8. Jalankan migrasi database**
+```bash
+php artisan migrate
+```
+
+**9. Build asset frontend**
+```bash
+npm run build
+```
+
+**10. Jalankan server development**
+```bash
+composer run dev
+# atau secara terpisah:
+php artisan serve
+npm run dev
+```
+
+Website akan berjalan di: **http://localhost:8000**
+
+---
+
+## 🚀 Deployment (Production)
+
+Website menggunakan **GitHub Actions** untuk auto-deploy ke InfinityFree Hosting melalui FTP setiap kali ada push ke branch `main`.
+
+### Setup GitHub Secrets
+Tambahkan secrets berikut di repository GitHub:
+
+| Secret | Keterangan |
+|---|---|
+| `FTP_SERVER` | Alamat server FTP hosting |
+| `FTP_USERNAME` | Username FTP |
+| `FTP_PASSWORD` | Password FTP |
+
+### Catatan Khusus untuk Shared Hosting (InfinityFree)
+Karena InfinityFree tidak mendukung symbolic links, gambar yang diupload disimpan langsung di folder `public/uploads/posts/` (bukan di `storage/`) agar bisa diakses via URL secara langsung.
+
+---
+
+## 👥 Role & Akses
+
+| Role | Akses |
+|---|---|
+| **Tamu** (belum login) | Beranda, Destinasi, Berita, Toko (lihat saja) |
+| **User** | Semua fitur tamu + Checkout, Riwayat Transaksi, Review Produk, Profil |
+| **Seller** | Semua fitur user + Kelola Produk sendiri |
+| **Admin** | Akses penuh: Kelola Destinasi, Berita, dan User |
+
+---
+
+## 🌐 Halaman Website
+
+| URL | Akses | Deskripsi |
+|---|---|---|
+| `/` | Publik | Halaman Beranda |
+| `/destinasi` | Publik | Daftar Destinasi Wisata |
+| `/destinasi/{id}` | Publik | Detail Destinasi |
+| `/toko` | Publik | Katalog Toko Outdoor |
+| `/toko/{id}` | Publik | Detail Produk |
+| `/berita` | Publik | Daftar Artikel & Berita |
+| `/berita/{id}` | Publik | Detail Artikel |
+| `/dashboard` | Login | Dashboard Pengguna |
+| `/riwayat-transaksi` | Login | Riwayat Pembelian |
+| `/profile` | Login | Kelola Profil |
+| `/checkout` | Login | Proses Pembelian |
+| `/admin/berita` | Admin | Kelola Berita |
+| `/admin/destinasi` | Admin | Kelola Destinasi |
+| `/admin/users` | Admin | Kelola Pengguna |
+| `/seller/products` | Seller | Kelola Produk |
+
+---
+
+## 💳 Alur Pembayaran
+
+```
+User pilih produk → Tambah ke keranjang → Checkout
+       ↓
+Midtrans Snap (popup pembayaran)
+       ↓
+User bayar (Transfer/QRIS/dll.)
+       ↓
+Midtrans kirim webhook → /midtrans/callback
+       ↓
+Status transaksi diupdate: pending → paid
+       ↓
+User bisa lihat di Riwayat Pembelian
+```
+
+---
+
+## 📦 Dependensi Utama
+
+```json
+{
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^12.0",
+    "midtrans/midtrans-php": "^2.6",
+    "spatie/laravel-permission": "^6.25"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.0",
+    "alpinejs": "^3.4.2",
+    "vite": "^7.0.7",
+    "laravel-breeze": "^2.4"
+  }
+}
+```
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi sangat terbuka! Silakan fork repository ini dan buat pull request.
+
+1. Fork project ini
+2. Buat branch baru: `git checkout -b fitur/nama-fitur`
+3. Commit perubahan: `git commit -m 'feat: tambah fitur X'`
+4. Push ke branch: `git push origin fitur/nama-fitur`
+5. Buat Pull Request
+
+---
+
+## 📄 Lisensi
+
+Project ini menggunakan lisensi [MIT](https://opensource.org/licenses/MIT).
+
+---
+
+<div align="center">
+
+**Dibuat dengan ❤️ untuk memajukan wisata Jambi**
+
+[🌐 jambiadventure.web.id](https://jambiadventure.web.id)
+
+</div>
