@@ -68,9 +68,14 @@
             @forelse($beritaTerbaru as $item)
                 <div class="group bg-white rounded-2xl shadow hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
                     <div class="relative overflow-hidden h-52">
-                        @if($item->image && file_exists(storage_path('app/public/' . $item->image)))
-                            <img src="{{ asset('storage/' . $item->image) }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        @else
+                    @if($item->image)
+                        @php
+                            $imgUrl = str_starts_with($item->image, 'uploads/')
+                                ? asset($item->image)
+                                : asset('storage/' . $item->image);
+                        @endphp
+                        <img src="{{ $imgUrl }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    @else
                             <div class="w-full h-full bg-gradient-to-br from-[#0D3B5E] to-[#1A6FA8] flex flex-col items-center justify-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
                                 <span style="font-size:11px; color:rgba(255,255,255,0.5); font-weight:600; letter-spacing:0.05em;">BERITA TRAVEL</span>
@@ -108,9 +113,14 @@
             @forelse($destinations as $destination)
                 <div class="group bg-white rounded-2xl shadow hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
                     <div class="relative overflow-hidden h-52">
-                        @if($destination->image && file_exists(storage_path('app/public/' . $destination->image)))
-                            <img src="{{ asset('storage/' . $destination->image) }}" alt="Foto {{ $destination->name }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        @else
+                    @if($destination->image)
+                        @php
+                            $destImgUrl = str_starts_with($destination->image, 'uploads/')
+                                ? asset($destination->image)
+                                : asset('storage/' . $destination->image);
+                        @endphp
+                        <img src="{{ $destImgUrl }}" alt="Foto {{ $destination->name }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    @else
                             <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110 relative" style="background-image:url('{{ asset('images/background_home.png') }}')">
                                 <div class="absolute inset-0 bg-[#0D3B5E]/50"></div>
                                 <div class="absolute inset-0 flex items-center justify-center">

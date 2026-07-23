@@ -30,6 +30,10 @@ Route::get('/tentang-kami', function () {return view('tentang-kami');});
 Route::get('/layanan', function () {return view('layanan');});
 Route::get('/kebijakan-privasi', function () {return view('kebijakan-privasi');});
 
+// Halaman berita (publik - bisa diakses tanpa login)
+Route::get('/berita', [PostController::class, 'index']);
+Route::get('/berita/{id}', [PostController::class, 'show']);
+
 
 // Midtrans Callback (Harus di luar Auth)
 Route::post('/midtrans/callback', [PaymentNotificationController::class, 'handle']);
@@ -59,11 +63,6 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::get('/checkout/resume/{order_id}', [App\Http\Controllers\CheckoutController::class, 'resume'])->name('checkout.resume');
-
-    // Halaman berita
-    Route::get('/berita', [PostController::class, 'index']);
-    Route::get('/berita/{id}', [PostController::class, 'show']);
-    
     Route::get('/riwayat-transaksi', [TransactionController::class, 'index'])->name('transactions.history');
 });
 
