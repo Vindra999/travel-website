@@ -82,7 +82,13 @@
                             {{-- Thumbnail --}}
                             <td class="px-6 py-4">
                                 @if($item->image)
-                                    <img src="{{ asset('storage/' . $item->image) }}" alt="Image" class="w-20 h-14 object-cover rounded-md">
+                                    @php
+                                        // Dukung format path lama (image/xxx) dan baru (uploads/posts/xxx)
+                                        $imgUrl = str_starts_with($item->image, 'uploads/')
+                                            ? asset($item->image)
+                                            : asset('storage/' . $item->image);
+                                    @endphp
+                                    <img src="{{ $imgUrl }}" alt="Image" class="w-20 h-14 object-cover rounded-md">
                                 @else
                                     {{-- Ikon bawaan jika berita tidak memiliki gambar --}}
                                     <div class="w-20 h-14 bg-gray-50 rounded-lg flex items-center justify-center text-xl border border-dashed border-gray-200 text-gray-400">
@@ -90,6 +96,7 @@
                                     </div>
                                 @endif
                             </td>
+
                             
                             {{-- Konten Teks --}}
                             <td class="px-6 py-4">

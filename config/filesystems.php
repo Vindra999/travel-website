@@ -28,7 +28,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => public_path('storage'),
+            'root' => storage_path('app/public'),
             'url' => rtrim(env('APP_URL', 'https://jambiadventure.web.id'), '/') . '/storage',
             'visibility' => 'public',
             'throw' => false,

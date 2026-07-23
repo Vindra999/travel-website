@@ -6,13 +6,14 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
     public function index(Request $request)
     {
         $posts = Post::with('user')
-            ->when($request->category, function($query) use ($request) {
+            ->when($request->category, function ($query) use ($request) {
                 $query->where('category', $request->category);
             })
             ->latest()
@@ -21,21 +22,16 @@ class PostController extends Controller
         return view('posts.index', compact('posts'));
     }
 
-    public function show(string$id)
+    public function show(string $id)
     {
         $post = Post::with('user')->findOrFail($id);
         return view('posts.show', compact('post'));
     }
 
-    // ... method index dan show sebelumnya ...
-
     // 1. Menampilkan halaman tabel Kelola Berita (Dashboard Admin)
     public function adminIndex()
     {
-        // Mengambil data untuk admin, mungkin tidak perlu difilter per kategori
         $posts = Post::latest()->paginate(10);
-        
-        // Mengarahkan ke file view admin/berita/index.blade.php yang tadi kita buat
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -45,20 +41,70 @@ class PostController extends Controller
         return view('admin.posts.create');
     }
 
+    /**
+     * Simpan gambar langsung ke public/uploads/posts/
+     * Solusi untuk shared hosting (InfinityFree) yang tidak mendukung symlink.
+     */
+    private function storeImage(Request $request): ?string
+    {
+        if (!$request->hasFile('image')) {
+            return null;
+        }
+
+        $uploadDir = public_path('uploads/posts');
+
+        // Buat folder jika belum ada
+        if (!file_exists($uploadDir)) {
+            mkdir($uploadDir, 0775, true);
+        }
+
+        $file     = $request->file('image');
+        $filename = Str::uuid() . '.' . $file->getClientOriginalExtension();
+        $file->move($uploadDir, $filename);
+
+        // Kembalikan path relatif yang disimpan ke DB
+        return 'uploads/posts/' . $filename;
+    }
+
+    /**
+     * Hapus file gambar dari public/ jika ada.
+     * Mendukung format path lama (image/xxx.jpg via Storage) maupun baru (uploads/posts/xxx.jpg).
+     */
+    private function deleteImage(?string $imagePath): void
+    {
+        if (!$imagePath) {
+            return;
+        }
+
+        // Gambar lama yang disimpan via Storage::disk('public') → storage/app/public/image/
+        if (str_starts_with($imagePath, 'image/')) {
+            Storage::disk('public')->delete($imagePath);
+            return;
+        }
+
+        // Gambar baru yang disimpan langsung di public/uploads/posts/
+        $fullPath = public_path($imagePath);
+        if (file_exists($fullPath)) {
+            unlink($fullPath);
+        }
+    }
+
+    // 3. Menyimpan berita baru
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
+            'title'    => 'required|string|max:255',
+            'content'  => 'required|string',
             'category' => 'required|string|max:100',
-            'image' => 'nullable|image|max:2048', // Validasi untuk file gambar
+            'image'    => 'nullable|image|max:2048',
         ]);
 
-        $data = $request->only('title', 'content', 'category');
+        $data            = $request->only('title', 'content', 'category');
         $data['user_id'] = Auth::id();
 
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('image', 'public');
+        $imagePath = $this->storeImage($request);
+        if ($imagePath) {
+            $data['image'] = $imagePath;
         }
 
         Post::create($data);
@@ -66,6 +112,7 @@ class PostController extends Controller
         return redirect('/admin/berita')->with('success', 'Berita berhasil ditambahkan.');
     }
 
+    // 4. Menampilkan formulir edit berita
     public function edit($id)
     {
         $post = Post::findOrFail($id);
@@ -75,49 +122,32 @@ class PostController extends Controller
     // 5. Menyimpan perubahan data berita
     public function update(Request $request, $id)
     {
-        // 1. Validasi input (thumbnail dibuat nullable karena admin tidak wajib ganti gambar)
         $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
+            'title'    => 'required|string|max:255',
+            'content'  => 'required|string',
             'category' => 'required|string|max:100',
-            'image' => 'nullable|image|max:2048', 
+            'image'    => 'nullable|image|max:2048',
         ]);
 
-        // 2. Cari data berita yang ingin diedit
         $post = Post::findOrFail($id);
-
-        // 3. Ambil data teks yang baru
         $data = $request->only('title', 'content', 'category');
 
-        // 4. Logika penanganan gambar JIKA admin mengunggah gambar baru
         if ($request->hasFile('image')) {
-            
-            // Hapus gambar lama dari folder public/storage jika sebelumnya ada gambar
-            if ($post->image && Storage::exists('public/' . $post->image)) {
-                Storage::delete('public/' . $post->image);
-            }
-
-            // Simpan gambar baru ke folder public/thumbnails
-            $data['image'] = $request->file('image')->store('image', 'public');
+            // Hapus gambar lama lalu simpan gambar baru
+            $this->deleteImage($post->image);
+            $data['image'] = $this->storeImage($request);
         }
 
-        // 5. Lakukan update data ke database
         $post->update($data);
 
-        // 6. Kembalikan ke halaman daftar dengan pesan sukses
         return redirect('/admin/berita')->with('success', 'Berita berhasil diperbarui!');
     }
 
-    // 3. Menghapus data berita
+    // 6. Menghapus data berita
     public function destroy(string $id)
     {
         $post = Post::findOrFail($id);
-        
-        // Hapus file thumbnail jika ada
-        if ($post->image && Storage::exists('public/' . $post->image)) {
-            Storage::delete('public/' . $post->image);
-        }
-        
+        $this->deleteImage($post->image);
         $post->delete();
 
         return redirect()->back()->with('success', 'Berita berhasil dihapus.');
