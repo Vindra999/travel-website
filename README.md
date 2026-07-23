@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏔️ JambiAdventure
+# JambiAdventure
 
 ### Platform Wisata Alam & Petualangan Jambi
 
@@ -22,65 +22,65 @@
 
 | Halaman Beranda | Halaman Berita |
 |:-:|:-:|
-| ![Beranda](https://i.imgur.com/placeholder1.png) | ![Berita](https://i.imgur.com/placeholder2.png) |
+| ![Beranda](https://imgur.com/l4b7BwW) | ![Berita](https://imgur.com/QrwYwpK) |
 
-| Toko Outdoor | Dashboard Admin |
+| Toko Outdoor |
 |:-:|:-:|
-| ![Toko](https://i.imgur.com/placeholder3.png) | ![Admin](https://i.imgur.com/placeholder4.png) |
+| ![Toko](https://imgur.com/YJHDLiC)
 
 </div>
 
-> **🌐 Live Demo:** [https://jambiadventure.web.id](https://jambiadventure.web.id)
+> ** Live Demo:** [https://jambiadventure.web.id](https://jambiadventure.web.id)
 
 ---
 
-## 📖 Tentang JambiAdventure
+## Tentang JambiAdventure
 
 **JambiAdventure** adalah platform wisata digital yang dirancang khusus untuk mempromosikan keindahan alam dan destinasi petualangan di Provinsi Jambi. Website ini menjadi jembatan antara wisatawan dengan pengalaman alam terbaik — mulai dari informasi destinasi, berita wisata terkini, hingga pembelian perlengkapan outdoor secara online.
 
 ### Visi & Misi
-- 🎯 Menjadi portal wisata petualangan Jambi yang paling lengkap dan terpercaya
-- 🌿 Mempromosikan keindahan alam Jambi (Gunung Kerinci, Danau Gunung Tujuh, dll.)
-- 🛒 Memudahkan wisatawan mendapatkan perlengkapan outdoor berkualitas
-- 📰 Menyajikan berita dan inspirasi perjalanan yang informatif
+- Menjadi portal wisata petualangan Jambi yang paling lengkap dan terpercaya
+- Mempromosikan keindahan alam Jambi (Gunung Kerinci, Danau Gunung Tujuh, dll.)
+- Memudahkan wisatawan mendapatkan perlengkapan outdoor berkualitas
+- Menyajikan berita dan inspirasi perjalanan yang informatif
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
-### 👤 Fitur untuk Pengunjung (Tanpa Login)
+### Fitur untuk Pengunjung (Tanpa Login)
 | Fitur | Deskripsi |
 |---|---|
-| 🏠 **Halaman Beranda** | Hero banner, berita terkini, destinasi unggulan, dan produk populer |
-| 🗺️ **Destinasi Wisata** | Jelajahi destinasi wisata Jambi lengkap dengan foto dan lokasi |
-| 📰 **Berita & Artikel** | Baca artikel dan inspirasi perjalanan tanpa perlu login |
-| 🛒 **Toko Outdoor** | Lihat katalog produk perlengkapan outdoor beserta rating & ulasan |
-| 📄 **Halaman Informasi** | Tentang Kami, Layanan, dan Kebijakan Privasi |
+| **Halaman Beranda** | Hero banner, berita terkini, destinasi unggulan, dan produk populer |
+| **Destinasi Wisata** | Jelajahi destinasi wisata Jambi lengkap dengan foto dan lokasi |
+| **Berita & Artikel** | Baca artikel dan inspirasi perjalanan tanpa perlu login |
+| **Toko Outdoor** | Lihat katalog produk perlengkapan outdoor beserta rating & ulasan |
+| **Halaman Informasi** | Tentang Kami, Layanan, dan Kebijakan Privasi |
 
-### 🔐 Fitur untuk Member (Setelah Login)
+### Fitur untuk Member (Setelah Login)
 | Fitur | Deskripsi |
 |---|---|
-| 💳 **Checkout & Pembayaran** | Pembelian produk dengan integrasi payment gateway Midtrans |
-| 📦 **Riwayat Transaksi** | Pantau status pesanan (pending, paid, cancelled) |
-| ⭐ **Review Produk** | Berikan ulasan dan rating untuk produk yang dibeli |
-| 👤 **Manajemen Profil** | Edit data diri dan akun |
-| 🔄 **Resume Pembayaran** | Lanjutkan pembayaran yang tertunda |
+| **Checkout & Pembayaran** | Pembelian produk dengan integrasi payment gateway Midtrans |
+| **Riwayat Transaksi** | Pantau status pesanan (pending, paid, cancelled) |
+| **Review Produk** | Berikan ulasan dan rating untuk produk yang dibeli |
+| **Manajemen Profil** | Edit data diri dan akun |
+| **Resume Pembayaran** | Lanjutkan pembayaran yang tertunda |
 
-### 🛡️ Fitur Admin
+### Fitur Admin
 | Fitur | Deskripsi |
 |---|---|
-| 📍 **Kelola Destinasi** | CRUD destinasi wisata beserta foto dan koordinat peta |
-| 📝 **Kelola Berita** | Buat, edit, dan hapus artikel berita dengan upload thumbnail |
-| 👥 **Manajemen User** | Lihat dan kelola seluruh akun pengguna |
+| **Kelola Destinasi** | CRUD destinasi wisata beserta foto dan koordinat peta |
+| **Kelola Berita** | Buat, edit, dan hapus artikel berita dengan upload thumbnail |
+| **Manajemen User** | Lihat dan kelola seluruh akun pengguna |
 
-### 🏪 Fitur Seller
+### Fitur Seller
 | Fitur | Deskripsi |
 |---|---|
-| 📦 **Kelola Produk** | CRUD produk outdoor yang dijual di toko |
+| **Kelola Produk** | CRUD produk outdoor yang dijual di toko |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 | Teknologi | Versi | Kegunaan |
@@ -109,7 +109,7 @@
 
 ---
 
-## 🗄️ Struktur Database
+## Struktur Database
 
 ```
 users               — Data pengguna & autentikasi
@@ -128,7 +128,7 @@ transactions        — Riwayat pembelian
 
 ---
 
-## 📁 Struktur Proyek
+## Struktur Proyek
 
 ```
 jambiadventure/
@@ -269,7 +269,7 @@ Website akan berjalan di: **http://localhost:8000**
 
 ---
 
-## 🚀 Deployment (Production)
+##  Deployment (Production)
 
 Website menggunakan **GitHub Actions** untuk auto-deploy ke InfinityFree Hosting melalui FTP setiap kali ada push ke branch `main`.
 
@@ -287,7 +287,7 @@ Karena InfinityFree tidak mendukung symbolic links, gambar yang diupload disimpa
 
 ---
 
-## 👥 Role & Akses
+## Role & Akses
 
 | Role | Akses |
 |---|---|
@@ -298,7 +298,7 @@ Karena InfinityFree tidak mendukung symbolic links, gambar yang diupload disimpa
 
 ---
 
-## 🌐 Halaman Website
+## Halaman Website
 
 | URL | Akses | Deskripsi |
 |---|---|---|
@@ -320,7 +320,7 @@ Karena InfinityFree tidak mendukung symbolic links, gambar yang diupload disimpa
 
 ---
 
-## 💳 Alur Pembayaran
+## Alur Pembayaran
 
 ```
 User pilih produk → Tambah ke keranjang → Checkout
@@ -338,7 +338,7 @@ User bisa lihat di Riwayat Pembelian
 
 ---
 
-## 📦 Dependensi Utama
+## Dependensi Utama
 
 ```json
 {
@@ -359,7 +359,7 @@ User bisa lihat di Riwayat Pembelian
 
 ---
 
-## 🤝 Kontribusi
+## Kontribusi
 
 Kontribusi sangat terbuka! Silakan fork repository ini dan buat pull request.
 
@@ -371,7 +371,7 @@ Kontribusi sangat terbuka! Silakan fork repository ini dan buat pull request.
 
 ---
 
-## 📄 Lisensi
+## Lisensi
 
 Project ini menggunakan lisensi [MIT](https://opensource.org/licenses/MIT).
 
@@ -381,6 +381,6 @@ Project ini menggunakan lisensi [MIT](https://opensource.org/licenses/MIT).
 
 **Dibuat dengan ❤️ untuk memajukan wisata Jambi**
 
-[🌐 jambiadventure.web.id](https://jambiadventure.web.id)
+[jambiadventure.web.id](https://jambiadventure.web.id)
 
 </div>
