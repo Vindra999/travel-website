@@ -1,4 +1,4 @@
-<div align="center">
+<img width="1347" height="625" alt="image" src="https://github.com/user-attachments/assets/f39259e4-6c8a-4d22-a904-2f97a237c935" /><div align="center">
 
 # JambiAdventure
 
@@ -22,11 +22,11 @@
 
 | Halaman Beranda | Halaman Berita |
 |:-:|:-:|
-| ![Beranda](https://imgur.com/l4b7BwW) | ![Berita](https://imgur.com/QrwYwpK) |
+| ![Beranda](https://i.imgur.com/l4b7BwW.png) | ![Berita](https://i.imgur.com/QrwYwpK.png) |
 
-| Toko Outdoor |
+| Toko Outdoor | Destinasi |
 |:-:|:-:|
-| ![Toko](https://imgur.com/YJHDLiC)
+| ![Toko](https://i.imgur.com/YJHDLiC.png) | ![Destinasi](https://i.imgur.com/2OOpL6a.png) |
 
 </div>
 
